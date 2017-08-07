@@ -36,4 +36,4 @@ avahi-daemon -c && avahi-daemon -k
 rm -rf /run/avahi-daemon/{pid,socket}
 
 # Start avahi
-avahi-daemon --no-rlimits
+exec avahi-daemon --no-rlimits
