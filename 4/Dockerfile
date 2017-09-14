@@ -1,4 +1,4 @@
-FROM node:6.11
+FROM node:4
 MAINTAINER Hermann Mayer "hermann.mayer@hausgold.de"
 
 # You can change this environment variable on run's with -e
