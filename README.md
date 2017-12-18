@@ -1,10 +1,8 @@
-![mDNS enabled official/node](docs/assets/project.png)
+![mDNS enabled official/node](https://raw.githubusercontent.com/hausgold/docker-node/master/docs/assets/project.png)
 
-This Docker images provides the
-[official/node](https://hub.docker.com/_/node/)
-image as base with the mDNS/ZeroConf stack on top. So you can enjoy your
-[node](https://nodejs.org/) app while it is
-accessible by default as *node.local*. (Port 80)
+This Docker images provides the [official/node](https://hub.docker.com/_/node/) image as base with
+the mDNS/ZeroConf stack on top. So you can enjoy your [node](https://nodejs.org/) app
+while it is accessible by default as *node.local*. (Port 80)
 
 ## Requirements
 
@@ -60,12 +58,12 @@ This will result in *something.else.local*.
 
 By default *.local* is the default mDNS top level domain. This images does not
 force you to use it. But if you do not use the default *.local* top level
-domain, you need to [configure your host avahi
-configuration](https://wiki.archlinux.org/index.php/avahi#Configuring_mDNS_for_custom_TLD)
-to accept it.
+domain, you need to [configure your host avahi][custom_mdns] to accept it.
 
 ## Further reading
 
 * Docker/mDNS demo: https://github.com/Jack12816/docker-mdns
 * Archlinux howto: https://wiki.archlinux.org/index.php/avahi
 * Ubuntu/Debian howto: https://wiki.ubuntuusers.de/Avahi/
+
+[custom_mdns]: https://wiki.archlinux.org/index.php/avahi#Configuring_mDNS_for_custom_TLD
