@@ -4,6 +4,14 @@ This Docker images provides the [official/node](https://hub.docker.com/_/node/) 
 the mDNS/ZeroConf stack on top. So you can enjoy your [node](https://nodejs.org/) app
 while it is accessible by default as *node.local*. (Port 80)
 
+- [Requirements](#requirements)
+- [Getting starting](#getting-starting)
+- [docker-compose usage example](#docker-compose-usage-example)
+- [Host configs](#host-configs)
+- [Configure a different mDNS hostname](#configure-a-different-mdns-hostname)
+- [Other top level domains](#other-top-level-domains)
+- [Further reading](#further-reading)
+
 ## Requirements
 
 * Host enabled Avahi daemon
