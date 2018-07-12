@@ -65,6 +65,21 @@ $ docker run --rm -e MDNS_HOSTNAME=something.else.local hausgold/node
 
 This will result in *something.else.local*.
 
+You can also configure multiple aliases (CNAME's) for your container by
+passing the *MDNS_CNAMES* environment variable. It will register all the comma
+separated domains as aliases for the container, next to the regular mDNS
+hostname.
+
+```bash
+$ docker run --rm \
+  -e MDNS_HOSTNAME=something.else.local \
+  -e MDNS_CNAMES=nothing.else.local,special.local \
+  hausgold/ruby
+```
+
+This will result in *something.else.local*, *nothing.else.local* and
+*special.local*.
+
 ## Other top level domains
 
 By default *.local* is the default mDNS top level domain. This images does not
