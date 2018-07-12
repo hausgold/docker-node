@@ -33,7 +33,7 @@ if [ -n "${MDNS_CNAMES}" ]; then
   for CNAME in "${CNAMES[@]}"; do
     # Construct the command
     COMMAND='/usr/bin/avahi-publish -f -a -R'
-    COMMAND+=" \"${CNAME}\" \`hostname --ip-address\`"
+    COMMAND+=" \"${CNAME}\" \`hostname -i\`"
 
     # Write a new supervisord unit file
     cat > "/etc/supervisor/conf.d/${CNAME}.conf" <<EOF
