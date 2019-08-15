@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# After nss-mdns >0.10 we need to reconfigure the allowed hosts to support
+# multiple sub-domain resolution
+cat > /etc/mdns.allow <<EOF
+.local.
+.local
+EOF
+
 # Configure the mDNS hostname on avahi
 if [ -n "${MDNS_HOSTNAME}" ]; then
 

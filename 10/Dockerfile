@@ -7,7 +7,7 @@ ENV MDNS_HOSTNAME=node.local
 # Install system packages
 RUN apt-get update -yqqq && \
   apt-get install -y \
-    avahi-daemon avahi-discover avahi-utils libnss-mdns haproxy supervisor
+    dbus avahi-daemon avahi-utils libnss-mdns haproxy supervisor
 
 # Copy avahi.sh
 COPY config/avahi.sh /usr/local/bin/
