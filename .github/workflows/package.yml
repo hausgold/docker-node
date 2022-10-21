@@ -20,6 +20,7 @@ jobs:
       matrix:
         version:
           - latest
+          - 19
           - 18
           - 16
           - 14
