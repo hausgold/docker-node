@@ -20,7 +20,7 @@ fi
 # Configure the mDNS hostname on avahi
 if [ -n "${MDNS_HOSTNAME}" ]; then
 
-  # MDNS_HOSTNAME could be elasticsearch.local or elasticsearch.sub.local
+  # MDNS_HOSTNAME could be node.local or node.sub.local
   IFS='.' read -ra MDNS_HOSTNAME_PARTS <<< "${MDNS_HOSTNAME}"
 
   # Save the first part as host part
@@ -36,6 +36,7 @@ if [ -n "${MDNS_HOSTNAME}" ]; then
   sed \
     -e "s/.*\(host-name=\).*/\1${HOST_PART}/g" \
     -e "s/.*\(domain-name=\).*/\1${DOMAIN_PART}/g" \
+    -e "s/.*\(enable-dbus=\).*/\1yes/g" \
     -i /etc/avahi/avahi-daemon.conf
 
   echo "Configured mDNS hostname to ${MDNS_HOSTNAME}"
