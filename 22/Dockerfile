@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:22
 LABEL org.opencontainers.image.authors="containers@hausgold.de"
 
 # You can change this environment variable on run's with -e
