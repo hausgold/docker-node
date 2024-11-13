@@ -35,15 +35,12 @@ directly accessible. The port 3000 is untouched.
 ## docker-compose usage example
 
 ```yaml
-node:
-  image: hausgold/node
-  environment:
-    # Mind the .local suffix
-    - MDNS_HOSTNAME=node.test.local
-  ports:
-    # The ports are just for you to know when configure your
-    # container links, on depended containers
-    - "3000"
+services:
+  node:
+    image: hausgold/node
+    environment:
+      # Mind the .local suffix
+      MDNS_HOSTNAME: node.test.local
 ```
 
 ## Host configs
