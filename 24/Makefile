@@ -10,7 +10,7 @@ SHELL := bash
 REGISTRY ?=
 CANONICAL_NAME ?= node
 IMAGE_NAME ?= hausgold/$(CANONICAL_NAME)
-IMAGE_REF ?= 18
+IMAGE_REF ?= 24
 IMAGE_URI := $(IMAGE_NAME):$(IMAGE_REF)
 
 # Host binaries
