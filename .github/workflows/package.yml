@@ -20,6 +20,7 @@ jobs:
       matrix:
         version:
           - latest
+          - 25
           - 24
           - 22
     steps:
